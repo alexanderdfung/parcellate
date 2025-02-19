@@ -1,4 +1,6 @@
 import os
+import argparse
+
 
 ROOT_DIR = '/om2/user/alexfung/repos/parcellate'
 EXPT_INFO_DIR = os.path.join(ROOT_DIR, 'expt_info')
@@ -21,6 +23,18 @@ LABEL_ARGS = dict(
 )
 
 SEP = '  '
+   
+
+def get_parser():
+    parser = argparse.ArgumentParser(
+            description='Parcellation with functional correlation')
+    parser.add_argument(
+            '--expt_id', default='PereiraE1_sem', type=str, action='store')
+    parser.add_argument(
+            '--overwrite', default=False, action='store_true')
+    parser.add_argument(
+            '--verbose', default=False, action='store_true')
+    return parser
 
 
 def proc_uid(uid):
@@ -91,3 +105,4 @@ def write_slurm_job(
     cmd = f'python -m parcellate.bin.make_jobs {CFG_DIR}/{expt_id}/{uid}.yml ' + \
         f'-t 8 -m 32 -n 1 -e node067,node093 -s {PARC_DIR} --outdir {PBS_DIR}/{expt_id}'
     os.system(cmd)
+    
