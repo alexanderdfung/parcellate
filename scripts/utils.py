@@ -103,6 +103,6 @@ def write_slurm_job(
         uid,
         expt_id,):
     cmd = f'python -m parcellate.bin.make_jobs {CFG_DIR}/{expt_id}/{uid}.yml ' + \
-        f'-t 8 -m 32 -n 1 -e node067,node093 -s {PARC_DIR} --outdir {PBS_DIR}/{expt_id}'
+        f'-t 8 -m 150 -n 1 -e node067,node093 -s {PARC_DIR} --outdir {PBS_DIR}/{expt_id}'
     os.system(cmd)
     
