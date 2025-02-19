@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+#SBATCH --job-name=366_parcellate
+#SBATCH --output="366_parcellate-%N-%j.out"
+#SBATCH --time=8:00:00
+#SBATCH --mem=32gb
+#SBATCH --ntasks=1
+#SBATCH --exclude=node067,node093
+
+
+set -e
+
+python -m parcellate.bin.train /om2/user/alexfung/repos/parcellate/cfg/PereiraE1_sem/366.yml -P
+if ! [[ -L /nese/mit/group/evlab/u/alexfung/parcellate/366 ]]; then
+    echo "Ensuring directory /nese/mit/group/evlab/u/alexfung/parcellate/parcellate exists"
+    mkdir -p /nese/mit/group/evlab/u/alexfung/parcellate/parcellate
+    if [[ -d /nese/mit/group/evlab/u/alexfung/parcellate/366 ]]; then
+        if [[ -d /nese/mit/group/evlab/u/alexfung/parcellate/parcellate/366 ]]; then
+            echo "Removing stale target /nese/mit/group/evlab/u/alexfung/parcellate/parcellate/366"
+            rm -r /nese/mit/group/evlab/u/alexfung/parcellate/parcellate/366
+        fi
+        echo "Moving directory /nese/mit/group/evlab/u/alexfung/parcellate/366 to storage"
+        mv /nese/mit/group/evlab/u/alexfung/parcellate/366 /nese/mit/group/evlab/u/alexfung/parcellate/parcellate
+    fi
+    echo "Linking to directory /nese/mit/group/evlab/u/alexfung/parcellate/parcellate/366"
+    ln -s /nese/mit/group/evlab/u/alexfung/parcellate/parcellate/366 /nese/mit/group/evlab/u/alexfung/parcellate/366
+fi

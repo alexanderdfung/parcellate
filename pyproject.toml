@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parcellate"
+version = "1.0.0"
+dependencies = [
+  "numpy", 
+  "pandas",
+  "scipy",
+  "fast-poibin",
+  "nilearn",
+  "tqdm",
+  "pyyaml",
+  "ipykernel",
+  "ipdb",
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Cory Shain", email = "cshain@mit.edu"},
+  {name = "Alexander Fung", email = "alexfung@mit.edu"},
+]
+description = "Using Cory Shain's parcellation method to examine the functional organization of semantically consistent voxels"
+readme = "README.md"
+keywords = ["fMRI", "connectome", "language", "semantics"]
+classifiers = [
+  "Programming Language :: Python",
+]

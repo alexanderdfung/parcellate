@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: parcellate
+Version: 1.0.0
+Summary: Using Cory Shain's parcellation method to examine the functional organization of semantically consistent voxels
+Author-email: Cory Shain <cshain@mit.edu>, Alexander Fung <alexfung@mit.edu>
+Keywords: fMRI,connectome,language,semantics
+Classifier: Programming Language :: Python
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: fast-poibin
+Requires-Dist: nilearn
+Requires-Dist: tqdm
+Requires-Dist: pyyaml
+Requires-Dist: ipykernel
+Requires-Dist: ipdb
+
+# Parcellate-PereiraVisE1
+Using Cory Shain's parcellation method to examine the functional organization of semantically consistent voxels, using data from Expt. 1 of Pereira et al. 2018.
+
+### Example submission command
+```
+python -m parcellate.bin.make_jobs cfg/PereiraE1_sem/018.yml -t 8 -m 32 -n 1 -e node067,node093 -s /nese/mit/group/evlab/u/alexfung/parcellate
+```

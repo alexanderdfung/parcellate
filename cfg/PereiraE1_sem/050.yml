@@ -1,0 +1,43 @@
+sample:
+  main:
+    functional_paths:
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-01_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-02_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-03_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-04_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-05_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-06_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-07_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-08_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-09_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161115a_3T2_PL2017/Parcellate/func/sdwrfunc_run-10_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-01_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-02_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-03_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-04_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-05_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-06_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-07_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-08_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-09_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161116a_3T1_PL2017/Parcellate/func/sdwrfunc_run-10_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-01_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-02_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-03_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-04_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-05_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-06_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-07_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-08_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-09_bold.nii
+      - /mindhive/evlab/u/Shared/SUBJECTS/050_FED_20161118a_3T1_PL2017/Parcellate/func/sdwrfunc_run-10_bold.nii
+    n_samples: 256
+    high_pass: 0.01
+    low_pass: 0.1
+align:
+  main:
+    n_alignments: 512
+label:
+  main:
+    reference_atlases: LANG
+output_dir: /nese/mit/group/evlab/u/alexfung/parcellate/050
