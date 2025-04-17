@@ -3,7 +3,7 @@
 #SBATCH --job-name=050_parcellate
 #SBATCH --output="050_parcellate-%N-%j.out"
 #SBATCH --time=8:00:00
-#SBATCH --mem=32gb
+#SBATCH --mem=150gb
 #SBATCH --ntasks=1
 #SBATCH --exclude=node067,node093
 

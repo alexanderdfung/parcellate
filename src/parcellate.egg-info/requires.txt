@@ -1,9 +1,0 @@
-numpy
-pandas
-scipy
-fast-poibin
-nilearn
-tqdm
-pyyaml
-ipykernel
-ipdb

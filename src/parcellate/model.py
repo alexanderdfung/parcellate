@@ -12,6 +12,7 @@ from sklearn.metrics import mutual_info_score, normalized_mutual_info_score, adj
 # from sica.base import StabilizedICA
 from nilearn import image, masking, maskers, datasets
 from fast_poibin import PoiBin
+import ipdb
 
 from parcellate.cfg import *
 from parcellate.data import *
@@ -1273,7 +1274,7 @@ def parcellate(
 
                     labeling_dir = get_path(output_dir, 'subdir', 'label', labeling_id)
                     for filename in os.listdir(labeling_dir):
-                        if filename.endswith(suffix) or (not results_copied and filename == PATHS['label']['evaluation']):
+                        if filename.endswith(suffix) or (not results_copied and filename == PATHS['label']['output']):
                             shutil.copy(join(labeling_dir, filename), join(parcellation_dir, filename))
                 else:
                     stderr('%sParcellation exists. Skipping. To re-parcellate, run with overwrite=True.\n' %

@@ -1,4 +1,6 @@
 *.out
 *pycache*
 *.pbs
+*__pycache__*
+*egg-info*
 

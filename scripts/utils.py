@@ -1,6 +1,7 @@
 import os
 import argparse
-
+import copy
+import ipdb
 
 ROOT_DIR = '/om2/user/alexfung/repos/parcellate'
 EXPT_INFO_DIR = os.path.join(ROOT_DIR, 'expt_info')
@@ -9,6 +10,7 @@ PBS_DIR = os.path.join(ROOT_DIR, 'pbs')
 
 SUBJ_DIR = '/mindhive/evlab/u/Shared/SUBJECTS'
 PARC_DIR = '/nese/mit/group/evlab/u/alexfung/parcellate'
+SEM_CON_DIR = '/nese/mit/group/evlab/u/ryskina/glmsingle/consistency_niis/subject_consistency_maps'
 
 SAMPLE_ARGS = dict(
     n_samples=256,
@@ -19,7 +21,7 @@ ALIGN_ARGS = dict(
     n_alignments=512,
 )
 LABEL_ARGS = dict(
-    reference_atlases='LANG',
+    reference_atlases=['LANG'],
 )
 
 SEP = '  '
@@ -75,6 +77,9 @@ def write_yaml(
         align_args=ALIGN_ARGS,
         label_args=LABEL_ARGS,):
     parc_dir = os.path.join(PARC_DIR, uid)
+    sem_con_atlas_path = os.path.join(SEM_CON_DIR, f'raw_corr_uid{int(uid)}.nii')
+    label_args = copy.deepcopy(label_args)
+    label_args['reference_atlases'].append(['SEM_CON', sem_con_atlas_path])
     lines = [
         'sample:',
         f'{SEP}{sample_id}:',

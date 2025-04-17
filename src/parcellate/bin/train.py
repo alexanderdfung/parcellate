@@ -2,6 +2,7 @@ import os
 import textwrap
 import yaml
 import argparse
+import ipdb
 
 from parcellate.cfg import *
 from parcellate.data import purge_bad_nii
@@ -79,7 +80,7 @@ if __name__ == '__main__':
         grid_params = get_grid_params(cfg)
     else:
         grid_params = None
-
+    
     parcellate(
         output_dir,
         action_sequence,

@@ -39,5 +39,5 @@ align:
     n_alignments: 512
 label:
   main:
-    reference_atlases: LANG
+    reference_atlases: ['LANG', ['SEM_CON', '/nese/mit/group/evlab/u/ryskina/glmsingle/consistency_niis/subject_consistency_maps/raw_corr_uid296.nii']]
 output_dir: /nese/mit/group/evlab/u/alexfung/parcellate/296
