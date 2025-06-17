@@ -94,7 +94,7 @@ def get_atlas(atlas, fwhm=None, threshold=None):
         else:
             path = None
     else:
-        assert len(atlas) == 2, 'Reference network must be a pair: <path, value>.'
+        assert len(atlas) == 2, 'Reference network must be a pair: <name, val>.'
         name, val = atlas
         if isinstance(val, str):
             path = val

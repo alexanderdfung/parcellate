@@ -79,6 +79,7 @@ def write_yaml(
     parc_dir = os.path.join(PARC_DIR, uid)
     sem_con_atlas_path = os.path.join(SEM_CON_DIR, f'raw_corr_uid{int(uid)}.nii')
     label_args = copy.deepcopy(label_args)
+    label_args['reference_atlases'].append('default')
     label_args['reference_atlases'].append(['SEM_CON', sem_con_atlas_path])
     lines = [
         'sample:',
